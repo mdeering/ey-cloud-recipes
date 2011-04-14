@@ -28,9 +28,6 @@
 #uncomment to run the ssmtp recipe
 #require_recipe "ssmtp"
 
-#uncomment to run the mongodb recipe
-# require_recipe "mongodb"
-
 #uncomment to run the sunspot recipe
 # require_recipe "sunspot"
 
@@ -64,8 +61,14 @@
 
 #require_recipe 'nginx'
 
+#uncomment to include the mysql_replication_check recipe
+#require_recipe "mysql_replication_check"
+
+#uncomment to include the mysql_administrative_tools recipe
+# additional configuration of this recipe is required
+#require_recipe "mysql_administrative_tools"
+
 package "app-misc/wkhtmltopdf-bin" do
-  version "0.10.0_beta5" 
+  version "0.10.0_beta5"
   action :install
 end
-
